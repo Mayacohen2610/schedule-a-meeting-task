@@ -1,0 +1,11 @@
+employee_id,full_name,start_time,end_time,room_name
+101,Alice Johnson,08:00,09:30,Negev Boardroom
+102,Jack Smith,08:00,09:30,Negev Boardroom
+103,Bob Miller,08:00,09:30,Negev Boardroom
+101,Alice Johnson,10:00,11:00,Aravaland
+102,Jack Smith,11:30,12:30,Aravaland
+103,Bob Miller,13:00,14:30,Hermon Room
+104,Dana Cohen,13:00,14:30,Hermon Room
+101,Alice Johnson,15:00,16:00,Galilee Hub
+102,Jack Smith,15:00,16:00,Galilee Hub
+104,Dana Cohen,16:30,18:00,Eilat Corner

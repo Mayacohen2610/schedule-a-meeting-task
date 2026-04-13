@@ -1,0 +1,45 @@
+[tool.pytest.ini_options]
+# Pytest configuration for Meeting Scheduling Service
+
+# Test discovery
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+# Output options
+addopts = [
+    "-v",                          # Verbose output
+    "--tb=short",                  # Shorter traceback format
+    "--strict-markers",            # Strict marker checking
+    "-ra",                         # Show summary of all test outcomes
+    "--durations=10",              # Show 10 slowest tests
+]
+
+# Markers for organizing tests
+markers = [
+    "unit: Unit tests for business logic (CRUD layer)",
+    "integration: Integration tests for API endpoints",
+    "database: Database connectivity tests",
+    "slow: Tests that take longer to run",
+]
+
+# Coverage options (if using pytest-cov)
+# Uncomment these if you install pytest-cov: pip install pytest-cov
+# addopts = [
+#     "--cov=app",
+#     "--cov-report=html",
+#     "--cov-report=term-missing",
+# ]
+
+# Logging
+log_cli = false
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+# Warnings
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+]

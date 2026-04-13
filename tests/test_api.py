@@ -3,7 +3,7 @@ Pytest tests for API endpoints using FastAPI TestClient.
 """
 from fastapi.testclient import TestClient
 
-from main import app
+from app.main import app
 
 client = TestClient(app)
 

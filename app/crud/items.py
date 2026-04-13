@@ -1,25 +1,10 @@
 """
-CRUD operations for items. All SQL execution logic lives here.
+CRUD operations for items.
 """
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 
 from app import schemas
-
-
-def check_db_connection() -> bool:
-    """
-    Verifies PostgreSQL connectivity.
-    Returns True if database is reachable, False otherwise.
-    """
-    from app.database import engine
-
-    try:
-        with engine.connect() as conn:
-            conn.execute(text("SELECT 1"))
-        return True
-    except Exception:
-        return False
 
 
 def get_all_items(db: Session) -> list[dict]:
