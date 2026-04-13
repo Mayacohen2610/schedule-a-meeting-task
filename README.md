@@ -383,9 +383,6 @@ POST /rooms
 - [ ] Employee availability preferences
 - [ ] Meeting history and analytics
 
-## License
-
-MIT
 
 ## Documentation
 
