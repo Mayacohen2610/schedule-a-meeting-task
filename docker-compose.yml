@@ -1,0 +1,17 @@
+# PostgreSQL 15 database with persistent storage.
+# Credentials: interview_user/interview_pass, database: interview_db, port 5433.
+services:
+  postgres:
+    image: postgres:15
+    container_name: interview_template_postgres
+    environment:
+      POSTGRES_USER: interview_user
+      POSTGRES_PASSWORD: interview_pass
+      POSTGRES_DB: interview_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - interview_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  interview_postgres_data:
